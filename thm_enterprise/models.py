@@ -109,7 +109,7 @@ class TaskAttempt:
             correct=data["correct"],
             score=data.get("score", 0),
             attempts=data.get("attempts", 0),
-            id=data["_id"],
+            id=data.get("_id", ""),
             time_correct=(
                 datetime.fromisoformat(tc.replace("Z", "+00:00")) if tc else None
             ),
